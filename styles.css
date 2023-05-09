@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;;
+}
+html {
+    background: url(images/xp_wallpaper_phone.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1000px) {
+   html {
+    background: url(images/xp_wallpaper.jpg);
+   }
+}
