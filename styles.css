@@ -8,14 +8,16 @@ html {
     background-size: cover;
 }
 
-.bar_window_container { /*Border for the windows*/
+.bar_window_container { 
     border: 5px solid #245DDA;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     overflow: hidden;
     max-width: 700px;
     margin: 0 auto;
+    scale: 0.9;
 }
+
 
 .window_bar {
     display: flex;
@@ -74,6 +76,9 @@ html {
 
 /*CSS for tablets*/
 @media only screen and (min-width: 768px) {
+    .bar_window_container {
+        scale: 1;
+    }
 }
 
 /*CSS for PC's*/
@@ -82,6 +87,10 @@ html {
     background: url(images/xp_wallpaper.jpg)no-repeat center fixed;
     background-size: cover;
    }
+
+   .bar_window_container {
+    scale: 1;
+   }
 }
 
 /*CSS for 16:10 displays*/
@@ -89,5 +98,9 @@ html {
     html {
         background: url(images/xp_wallpaper_1200.jpg)no-repeat center fixed;
         background-size: cover;
+    }
+
+    .bar_window_container {
+        scale: 1;
     }
 }
