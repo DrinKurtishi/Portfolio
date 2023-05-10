@@ -13,6 +13,7 @@ html {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     overflow: hidden;
+    max-width: 700px;
     margin: 0 auto;
     scale: 0.9;
 }
@@ -83,7 +84,6 @@ html {
 
 /*CSS for tablets*/
 @media only screen and (min-width: 768px) {
-    
 }
 
 /*CSS for PC's*/
