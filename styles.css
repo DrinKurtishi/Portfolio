@@ -23,6 +23,7 @@ html {
     height: 500px;
     margin: 0;
     max-width: 700px;
+    margin-bottom: -5px;
 }
 
 /*CSS for tablets*/
