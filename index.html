@@ -6,27 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drin's portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" async></script>
 </head>
 <body>
-    <div class="bar_window_container">
+    <div class="folders_and_windows_container">
+        <div class="folder_with_name">
+            <img class="folder_icon" src="images/windows_folder_icon.png" draggable="false">
+            <p class="folder_name">About me</p>
+        </div>
+    <div class="bar_window_container" id="about_me_window">
         <div class="window_bar">
             <div class="bar_right">
                 <img src="images/ms_word_logo.jpg" width="30px" draggable="false">
-                <p id="ms_word_title">AboutMe - Microsoft Word</p>
+                <p class="title">AboutMe - Microsoft Word</p>
             </div>
             <div class="bar_left">
-                <button class="control-buttons" id="minimize">
+                <button class="control-buttons" id="minimize-about">
                     <img src="images/minimize.png" draggable="false" width="25px">
                 </button>
-                <button class="control-buttons" id="windowed">
+                <button class="control-buttons" id="windowed-about">
                     <img src="images/windowed.png" draggable="false" width="25px">
                 </button>
-                <button class="control-buttons" id="close">
+                <button class="control-buttons" id="close-about">
                     <img src="images/close.png" draggable="false" width="25px">
                 </button>
             </div>
         </div>
         <iframe id="google_docs" src="https://docs.google.com/document/d/e/2PACX-1vRqhxLlEXHjdckrAwvORW7I1GGWkCXg7Re0S8Y2fVVAqB6CS3D8kcPfJ2nBnRYhNgzRod3wstEbHp4Y/pub?embedded=true"></iframe>
+    </div>
     </div>
 </body>
 </html>

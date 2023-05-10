@@ -13,7 +13,6 @@ html {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     overflow: hidden;
-    max-width: 700px;
     margin: 0 auto;
     scale: 0.9;
 }
@@ -57,7 +56,7 @@ html {
     filter: brightness(80%);
 }
 
-#ms_word_title {
+.title {
     color: whitesmoke;
     font-size: 15px;
     font-weight: bold;
@@ -74,11 +73,17 @@ html {
     margin-bottom: -5px; /*removing default bottom gap from <iframe>*/
 }
 
+.folder_icon{ /*Dont display folders on small screens*/
+    display: none;
+}
+
+.folder_name {
+    display: none;
+}
+
 /*CSS for tablets*/
 @media only screen and (min-width: 768px) {
-    .bar_window_container {
-        scale: 1;
-    }
+    
 }
 
 /*CSS for PC's*/
@@ -90,7 +95,34 @@ html {
 
    .bar_window_container {
     scale: 1;
-   }
+    display: none;
+    width: 700px;
+    height: 500px;
+
+}
+
+.folder_with_name {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-top: 10px;
+
+}
+
+.folder_icon {
+    display: block;
+    width: 72px;
+}
+
+.folder_name {
+    display: block;
+    color: white;
+    text-shadow: 1px 2px 2px rgb(0, 0, 0);
+}
+
+.folders_and_windows_container {
+    display: flex;
+}
 }
 
 /*CSS for 16:10 displays*/
