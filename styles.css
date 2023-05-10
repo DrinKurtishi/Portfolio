@@ -1,10 +1,28 @@
 * {
     margin: 0;
-    padding: 0;;
+    padding: 0;
+    box-sizing: border-box;
 }
 html {
     background: url(images/xp_wallpaper_phone.jpg) no-repeat center fixed;
     background-size: cover;
+}
+
+.About_me {
+    border: 5px solid #245DDA;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#google_docs {
+    background-color: white;
+    width: 100%;
+    height: 500px;
+    margin: 0;
+    max-width: 700px;
 }
 
 /*CSS for tablets*/
