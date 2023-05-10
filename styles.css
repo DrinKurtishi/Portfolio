@@ -14,13 +14,15 @@ html {
 /*CSS for PC's*/
 @media only screen and (min-width: 1000px) {
    html {
-    background: url(images/xp_wallpaper.jpg);
+    background: url(images/xp_wallpaper.jpg)no-repeat center fixed;
+    background-size: cover;
    }
 }
 
 /*CSS for 16:10 displays*/
 @media only screen and (min-height: 1200px) {
     html {
-        background: url(images/xp_wallpaper_1200.jpg);
+        background: url(images/xp_wallpaper_1200.jpg)no-repeat center fixed;
+        background-size: cover;
     }
 }
