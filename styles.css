@@ -16,6 +16,7 @@ html {
     max-width: 700px;
     margin: 0 auto;
     scale: 0.9;
+    background-color: white;
 }
 
 
@@ -60,7 +61,7 @@ html {
 
 .title {
     color: whitesmoke;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
     margin: 0;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
@@ -82,9 +83,11 @@ html {
 .folder_name {
     display: none;
 }
-
-/*CSS for tablets*/
-@media only screen and (min-width: 768px) {
+#about_me_MS {
+    display: block;
+}
+#about_me_window {
+    display: none;
 }
 
 /*CSS for PC's*/
@@ -126,6 +129,25 @@ html {
 
 .folders_and_windows_container {
     display: flex;
+}
+
+.folders_in_folder {
+    display: flex;
+    align-items: flex-start;
+    margin: 13px;
+    gap: 20px;
+}
+#about_me_MS{
+    display: none;
+}
+#foto_matura {
+    width: 70%;
+    height: 500px;
+}
+#centering_picture{
+    display: flex;
+    justify-content: center;
+    background-color: black;
 }
 }
 

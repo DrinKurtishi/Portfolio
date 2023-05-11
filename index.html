@@ -10,30 +10,85 @@
 </head>
 <body>
     <div class="folders_and_windows_container">
-        <div class="folder_with_name">
+        <div class="folder_with_name" id="about_me_folder">
             <img class="folder_icon" src="images/windows_folder_icon.png" draggable="false">
             <p class="folder_name">About me</p>
         </div>
-    <div class="bar_window_container" id="about_me_window">
-        <div class="window_bar">
-            <div class="bar_right">
-                <img src="images/ms_word_logo.jpg" width="30px" draggable="false">
-                <p class="title">AboutMe - Microsoft Word</p>
+
+        <div class="bar_window_container" id="about_me_window">
+            <div class="window_bar">
+                <div class="bar_right">
+                    <img src="images/windows_folder_icon.png" width="30px" draggable="false">
+                    <p class="title">C:\About me</p>
+                </div>
+                <div class="bar_left">
+                    <button class="control-buttons" id="minimize-about-folder">
+                        <img src="images/minimize.png" draggable="false" width="25px">
+                    </button>
+                    <button class="control-buttons" id="windowed-about-folder">
+                        <img src="images/windowed.png" draggable="false" width="25px">
+                    </button>
+                    <button class="control-buttons" id="close-about-folder">
+                        <img src="images/close.png" draggable="false" width="25px">
+                    </button>
+                </div>
             </div>
-            <div class="bar_left">
-                <button class="control-buttons" id="minimize-about">
-                    <img src="images/minimize.png" draggable="false" width="25px">
-                </button>
-                <button class="control-buttons" id="windowed-about">
-                    <img src="images/windowed.png" draggable="false" width="25px">
-                </button>
-                <button class="control-buttons" id="close-about">
-                    <img src="images/close.png" draggable="false" width="25px">
-                </button>
+            <div class="folders_in_folder">
+                <div class="about_me_file" id="about_me_file">
+                    <img src="images/ms_word_logo.jpg" width="70px">
+                    <p>About me</p>
+                </div>
+                <div class="my_picture" id="my_picture_file">
+                    <img src="images/windows_photo_icon.png" width="70px" height="70px">
+                    <p>My picture</p>
+                </div>
             </div>
         </div>
-        <iframe id="google_docs" src="https://docs.google.com/document/d/e/2PACX-1vRqhxLlEXHjdckrAwvORW7I1GGWkCXg7Re0S8Y2fVVAqB6CS3D8kcPfJ2nBnRYhNgzRod3wstEbHp4Y/pub?embedded=true"></iframe>
-    </div>
+    
+
+        <div class="bar_window_container" id="about_me_MS">
+            <div class="window_bar">
+                <div class="bar_right">
+                    <img src="images/ms_word_logo.jpg" width="30px" draggable="false">
+                    <p class="title">AboutMe - Microsoft Word</p>
+                </div>
+                <div class="bar_left">
+                    <button class="control-buttons" id="minimize-about-file">
+                        <img src="images/minimize.png" draggable="false" width="25px">
+                    </button>
+                    <button class="control-buttons" id="windowed-about-file">
+                        <img src="images/windowed.png" draggable="false" width="25px">
+                    </button>
+                    <button class="control-buttons" id="close-about-file">
+                        <img src="images/close.png" draggable="false" width="25px">
+                    </button>
+                </div>
+            </div>
+            <iframe id="google_docs"src="https://docs.google.com/document/d/e/2PACX-1vRqhxLlEXHjdckrAwvORW7I1GGWkCXg7Re0S8Y2fVVAqB6CS3D8kcPfJ2nBnRYhNgzRod3wstEbHp4Y/pub?embedded=true"></iframe>
+        </div>
+
+        <div class="bar_window_container" id="about_me_photo">
+            <div class="window_bar">
+                <div class="bar_right">
+                    <img src="images/windows_photo_icon.png" width="30px" draggable="false">
+                    <p class="title">My picture - photo viewer</p>
+                </div>
+                <div class="bar_left">
+                    <button class="control-buttons" id="minimize-about-picture">
+                        <img src="images/minimize.png" draggable="false" width="25px">
+                    </button>
+                    <button class="control-buttons" id="windowed-about-picture">
+                        <img src="images/windowed.png" draggable="false" width="25px">
+                    </button>
+                    <button class="control-buttons" id="close-about-picture">
+                        <img src="images/close.png" draggable="false" width="25px">
+                    </button>
+                </div>
+            </div>
+            <div id="centering_picture">
+            <img id="foto_matura" src="images/foto_matura.jpg">
+            </div>
+        </div>
     </div>
 </body>
 </html>
