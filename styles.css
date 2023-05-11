@@ -48,6 +48,7 @@ html {
     background-color: transparent;
     width: 24px;
     padding: 0;
+    pointer-events: none; /*diable buttons on phone and tablet*/
 }
 .control-buttons:hover{
     filter:brightness(110%);
@@ -91,6 +92,9 @@ html {
    html {
     background: url(images/xp_wallpaper.jpg)no-repeat center fixed;
     background-size: cover;
+   }
+   .control-buttons{
+    pointer-events: all; /*re-enable buttons on PC*/
    }
 
    .bar_window_container {
