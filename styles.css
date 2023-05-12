@@ -45,18 +45,19 @@ html {
     transition: 0.1s;
     color: transparent;
     border-color: transparent;
-    cursor: pointer;
     background-color: transparent;
     width: 24px;
     padding: 0;
     pointer-events: none; /*diable buttons on phone and tablet*/
 }
-.control-buttons:hover{
+.close_button:hover{
     filter:brightness(110%);
     transition: 0.1s;
+    cursor: pointer;
 }
-.control-buttons:active{
+.close_button:active{
     filter: brightness(80%);
+    cursor: pointer;
 }
 
 .title {
@@ -150,8 +151,8 @@ html {
     display: none;
 }
 
-#foto_matura {
-    width: 70%;
+#about_me_photo {
+    width: 470px;
 }
 
 
