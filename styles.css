@@ -100,6 +100,10 @@ html {
     background-color: black;
 }
 
+#footer {
+  display: none;
+}
+
 /*CSS for PC's*/
 @media only screen and (min-width: 1000px) {
    html {
@@ -128,13 +132,14 @@ html {
 
 .folder_icon {
     display: block;
-    width: 72px;
+    width: 65px;
 }
 
 .folder_name {
     display: block;
     color: white;
     text-shadow: 1px 2px 2px rgb(0, 0, 0);
+    font-size:medium;
 }
 
 .folders_and_windows_container {
@@ -153,6 +158,24 @@ html {
 
 #about_me_photo {
     width: 470px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 35px;
+    left: 0;
+    right: 0;
+    background-color: #245DDA;
+    display: flex;
+    justify-content: space-between;
+   align-items: stretch;
+}
+#start_button {
+    height: 35px;
+}
+#tray_bar {
+    height: 35px;
 }
 
 
