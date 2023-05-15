@@ -25,6 +25,24 @@ close_projects_folder.addEventListener("click", () => {
   projects_window.style.display = "none";
 })
 
+//open paint app
+let paint_app = document.getElementById("paint_icon");
+let paintIFrame = document.getElementById("paintIFrame");
+let paint_window = document.getElementById("paint_window");
+
+//close paint app
+let close_paint = document.getElementById("close-paint");
+close_paint.addEventListener("click", () => {
+  paint_window.style.display = "none";
+})
+ 
+paint_app.addEventListener("dblclick", () => {
+    paintIFrame.src = "etch-a-sketch/index.html";
+    paint_window.style.display = "block";
+    paintIFrame.style.display = "block";
+    console.log("works");
+});
+
 
 //draggable window functionality
 
@@ -75,6 +93,8 @@ let about_me_bar = document.getElementById("about_me_bar");
 DraggableWindow('about_me_MS', 'about_me_bar');
 let projects_bar = document.getElementById("projects_bar");
 DraggableWindow('projects_window', 'projects_bar');
+let paint_bar = document.getElementById("paint_bar");
+DraggableWindow('paint_window', 'paint_bar');
 
 
 

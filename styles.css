@@ -118,6 +118,9 @@ html {
 #projects_window{
     display: none;
 }
+#paint_window{
+    display: none;
+}
 
 #footer {
   display: none;
@@ -225,6 +228,22 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#paintIFrame{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 700px;
+}
+#paint_window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 800px;
 }
 
 }

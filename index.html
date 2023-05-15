@@ -91,15 +91,39 @@
             </div>
         <div class="folders_in_folder">
             <div class="folder_with_name">
-                <img class="folder_icon" src="images/paint-logo.png">
+                <img class="folder_icon" id="paint_icon" src="images/paint-logo.png">
                 <p class="folder_in_folder_name">Paint</p>
             </div>
             <div class="folder_with_name">
-                <img class="folder_icon" src="images/windows_game_icon.png">
-                <p class="folder_in_folderr_name">RPS</p>
+                <img class="folder_icon" id="game_icon" src="images/windows_game_icon.png">
+                <p class="folder_in_folder_name">RPS</p>
             </div>
         </div>
         </div>
+        
+        <div class="bar_window_container" id="paint_window">
+        <div class="window_bar" id="paint_bar">
+            <div class="bar_right">
+                <img src="images/windows_folder_icon.png" width="30px" draggable="false">
+                <p class="title">My projects - folder</p>
+            </div>
+            <div class="bar_left">
+                <button class="control-buttons" id="minimize-paint">
+                    <img src="images/minimize.png" draggable="false" width="25px">
+                </button>
+                <button class="control-buttons" id="windowed-paint">
+                    <img src="images/windowed.png" draggable="false" width="25px">
+                </button>
+                <button class="control-buttons close_button" id="close-paint">
+                    <img src="images/close.png" draggable="false" width="25px">
+                </button>
+            </div>
+
+        </div>
+        <iframe id="paintIFrame" src=""></iframe>
+        </div>
+      
+
     </div>
 
     <footer id="footer">
