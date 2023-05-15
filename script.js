@@ -39,8 +39,8 @@ function DraggableWindow(windowElementID, windowBarElementID) {
 
   // Function to handle mouse down event on the window bar
   const handleMouseDown = (event) => {
+    event.preventDefault();
     isDragging = true;
-
     // Calculate the offset between the mouse position and the window position
     offsetX = event.clientX - windowElement.offsetLeft;
     offsetY = event.clientY - windowElement.offsetTop;
@@ -53,7 +53,8 @@ function DraggableWindow(windowElementID, windowBarElementID) {
 
   // Function to handle mouse move event
   const handleMouseMove = (event) => {
-    if (isDragging) {
+      event.preventDefault();
+      if (isDragging) {
       // Calculate the new position of the window based on the mouse movement
       const newLeft = event.clientX - offsetX;
       const newTop = event.clientY - offsetY;
