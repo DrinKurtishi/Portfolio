@@ -206,9 +206,6 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.bar_window_container.active{
-    z-index: 9999;
-}
 
 }
 
