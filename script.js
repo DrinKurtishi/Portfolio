@@ -37,3 +37,27 @@ close_my_picture.addEventListener("click", () => {
     my_picture.style.display = "none";
 });
 
+
+
+//z-index counter
+let z_index = 0;
+//giving a rising z index to every window so it comes
+// above the other windows every time it's clicked
+
+about_me_window.addEventListener("click", () =>{
+    about_me_window.style.zIndex = z_index;
+    z_index = z_index + 1;
+    console.log("zindex: ", z_index);
+});
+
+about_me_MS.addEventListener("click", () => {
+    about_me_MS.style.zIndex = z_index;
+    z_index = z_index + 1;
+});
+
+my_picture.addEventListener("click", () => {
+    my_picture.style.zIndex = z_index;
+    z_index = z_index + 1;
+});
+
+
