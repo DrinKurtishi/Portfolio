@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel ="stylesheet" href="https://fonts.googleapis.com/css?family=Silkscreen">
+    <script src="rps.js" async></script>
+    <script src="colors.js" async></script>
+    <title>Rock Paper Scissors</title>
+</head>
+<body id="body">
+<div class="container">
+    <div class="hero">
+        <div class="left">
+            <div class="choose-bgc">
+                Choose bgcolor
+            </div>
+            <div class="bgcolors">
+                <button class="bgbtn" id="purple" onclick="purple()"></button>
+                <button class="bgbtn" id="blue" onclick="blue()"></button>
+                <button class="bgbtn" id="yellow" onclick="yellow()"></button>
+                <button class="bgbtn" id="white" onclick="white()"></button>
+                <button class="bgbtn" id="black" onclick="black()"></button>
+            </div>
+        </div>
+        <div class="Header">
+            <p class="typewriter">ROCK PAPER SCISSORS</p>
+        </div>
+        <div class="right">
+            <a href="https://github.com/DrinKurtishi/rock-paper-scissors" target=”_blank”><img src="images/github.png" id="github"></a>
+            <a href="https://www.theodinproject.com/" target="_blank"><img src="images/odin-lined.png" id="odin"></a>
+        </div>
+    </div>
+    <div class="Subtext">
+        <p class="subtext">First to three wins the round.</p>
+        <p class="subsubtext">Win three rounds to win the game.</p>
+    </div>
+
+    <div class="Mid-section">
+        <div class="User-rounds">
+            <p>Your rounds won</p>
+            <div id="myRounds"></div>
+        </div>
+        <div class="UI-section">
+            <div class="UI">
+                <div class="choice-pics">
+                    <div id="MyPic"></div>
+                    <div class="scoreboard">
+                     <div id="MyScore"></div>
+                        <div id="PCscore"></div>
+                    </div>
+                    <div id="PCpic"></div>
+                </div>
+                <div id="output"></div>
+                <div id="final-output"></div>
+                <div class="buttons">
+                    <button class="options" id="rock"><img src="images/rock.png"></button>
+                    <button class="options" id="paper"><img src="images/paper.png"></button>
+                    <button class="options" id="scissors"><img src="images/scissors.png"></button>
+                </div>
+            </div>
+            <div class="gameButtons">
+                <button id="newGame" onclick="newGame()">New game</button>
+                <button id="newRound" onclick="newRound()">Next round</button>
+            </div>
+        </div>
+        <div class="PC-rounds">
+            <p>A.I rounds won</p>
+            <div id="PCrounds"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="creditText">Copyright © Drin Kurtishi LLC, all rights reserved. </p>
+    </div>
+</div>
+</body>
+</html>

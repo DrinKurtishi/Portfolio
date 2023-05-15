@@ -1,0 +1,274 @@
+#body{
+    margin: 0px;
+    font-family: 'Silkscreen', 'Courier New', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Header{
+    font-size: 50px;
+    margin-bottom: -40px;
+    margin-top: -30px;
+}
+#github, #odin{
+    height: 50px;
+    width: auto;
+}
+.right{
+    display: flex;
+    gap: 20px;
+    padding-right: 25px;
+}
+#odin:hover, #github:hover{
+    scale: 1.05;
+    transition: 0.1s;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 25px;
+}
+.Subtext{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subtext{
+    margin: 0px;
+}
+.UI{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.options img{
+    width: 90px;
+    height: 90px;
+    
+}
+.options{
+    color: transparent; 
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 70%;
+    transition: 0.1s;
+}
+.options:hover:enabled{
+    scale: 1.2;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}
+.options:active:enabled{
+    scale: 1.1;
+    transition: 0.1;
+}
+.scoreboard{
+    display: flex;
+    gap: 100px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+#output{
+    
+    padding-top: 10px;
+    font-size: 25px;
+}
+.choices{
+    display: flex;
+    gap: 60px;
+}
+.choice-pics{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.choice-pics img{
+    width: 140px;
+    height: 140px;
+}
+.buttons{
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+}
+#final-output{
+    font-size: 25px;
+    min-height: 32px;
+    margin: 10px;
+    margin-bottom: 15;
+}
+#newRound, #newGame{
+  align-self: center;
+  background-color: #202020;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-sizing: border-box;
+  color: whitesmoke;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Silkscreen", sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: whitesmoke 2px 8px 8px -5px;
+  min-width: 82px;
+}
+
+#newRound:hover, #newGame:hover {
+  transform: translate3d(0, 1px, 0);
+}
+
+#newRound:active, #newGame:active {
+  scale: 0.9;
+  transition: 0.1s;
+}
+.gameButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    padding-bottom: 0px;
+    gap: 30px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+}
+
+.creditText{
+    margin: 0px;
+    margin-top: 40px;
+    opacity: 0.5;
+    font-size: 13px;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 8px;
+}
+#purple{
+    background-color: #3a093a;
+}
+#blue{
+    background-color: rgb(30, 50, 90);
+}
+#yellow{
+    background-color: #FFDB58;
+}
+#white{
+    background-color: rgb(220, 220, 180);
+}
+#black{
+    background-color: #121212;
+}
+.bgbtn{
+    padding: 10px;
+    border: solid;
+    border-color: #5e5e5e;
+}
+.bgbtn:hover{
+    scale: 1.1;
+    transition: 0.1s;
+}
+.bgbtn:active{
+    scale: 1;
+    transition: 0.1s;
+}
+.UI-section{
+    margin-top: -20px;
+}
+.Mid-section{
+    display: flex;
+    justify-content: space-between;
+}
+.User-rounds{
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.PC-rounds{
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#myRounds, #PCrounds{
+    font-size: 80px;
+}
+/*for phone*/
+@media only screen and (max-width: 600px){
+    .hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .Header{
+        font-size: 30px;
+        margin-bottom: -40px;
+        margin-top: -30px;
+    }
+    .right{
+        display: flex;
+        gap: 5px;
+        padding-right: 10px;
+        flex-direction: column;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10px;
+    }
+    .choose-bgc{
+        font-size: 13px;
+    }
+    .bgbtn{
+        scale: 0.8;
+    }
+    #odin, #github{
+        scale: 0.7;
+    }
+    .typewriter, .subsubtext, .subtext{
+        text-align: center;
+    }
+    .User-rounds{
+        padding-left: 0px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .Subtext{
+        scale: 0.8;
+    }
+    .Mid-section{
+        margin-top: -110px;
+        scale: 0.6;
+        padding-left: 90px;   
+    }
+}
