@@ -9,10 +9,16 @@
     <script src="script.js" async></script>
 </head>
 <body>
-    <div class="fodlers_and_windows_container">
-        <div class="folder_with_name" id="about_me_file">
-            <img class="folder_icon" src="images/ms_word_logo.jpg">
-            <p class="folder_name">About me</p>
+    <div class="folders_and_windows_container">
+        <div class="folders_container">
+            <div class="folder_with_name" id="about_me_file">
+                <img class="folder_icon" src="images/ms_word_logo.jpg">
+                <p class="folder_name">About me</p>
+            </div>
+            <div class="folder_with_name" id="projects_folder">
+                <img class="folder_icon" src="images/windows_folder_icon.png">
+                <p class="folder_name">My projects</p>
+            </div>
         </div>
 
         <div class="bar_window_container" id="about_me_MS">
@@ -64,8 +70,32 @@
                 ornare vel erat. Nam consequat auctor orci vel congue. Maecenas at luctus velit.
             </div>
         </div>
+        <div class="bar_window_container" id="projects_window">
+            <div class="window_bar" id="projects_bar">
+                <div class="bar_right">
+                    <img src="images/windows_folder_icon.png" width="30px" draggable="false">
+                    <p class="title">My projects - folder</p>
+                </div>
+                <div class="bar_left">
+                    <button class="control-buttons" id="minimize-project">
+                        <img src="images/minimize.png" draggable="false" width="25px">
+                    </button>
+                    <button class="control-buttons" id="windowed-project">
+                        <img src="images/windowed.png" draggable="false" width="25px">
+                    </button>
+                    <button class="control-buttons close_button" id="close-project">
+                        <img src="images/close.png" draggable="false" width="25px">
+                    </button>
+                </div>
 
-       
+            </div>
+        <div class="folders_in_folder">
+            <img src="images/windows_folder_icon.png">
+            <img src="images/windows_folder_icon.png">
+            <img src="images/windows_folder_icon.png">
+            <img src="images/windows_folder_icon.png">
+        </div>
+        </div>
     </div>
 
     <footer id="footer">

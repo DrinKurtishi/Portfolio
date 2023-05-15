@@ -115,6 +115,10 @@ html {
     background-color: black;
 }
 
+#projects_window{
+    display: none;
+}
+
 #footer {
   display: none;
 }
@@ -142,6 +146,7 @@ html {
     flex-direction: column;
     margin-left: 15px;
     margin-top: 10px;
+    align-items: center;
 
 }
 
@@ -167,7 +172,18 @@ html {
     margin: 13px;
     gap: 20px;
 }
+.folders_in_folder img {
+    width: 65px;
+}
 #about_me_MS{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#projects_window{
     display: none;
     position: absolute;
     top: 50%;

@@ -11,55 +11,69 @@ close_aboutMe_file.addEventListener("click", () => {
     about_me_MS.style.display = "none";
 })
 
-//TODO --> dragging windows functionality
-// Get the window element and the window bar element
-const windowElement = document.getElementById('about_me_MS');
-const windowBarElement = document.getElementById('about_me_bar');
+//open projects folder
+let projects_folder = document.getElementById("projects_folder");
+let projects_window = document.getElementById("projects_window");
 
-let isDragging = false;
-let offsetX = 0;
-let offsetY = 0;
+projects_folder.addEventListener("dblclick", () => {  
+    projects_window.style.display = "block";
+});
 
-// Function to handle mouse down event on the window bar
-const handleMouseDown = (event) => {
-  isDragging = true;
-
-  // Calculate the offset between the mouse position and the window position
-  offsetX = event.clientX - windowElement.offsetLeft;
-  offsetY = event.clientY - windowElement.offsetTop;
-};
-
-// Function to handle mouse up event
-const handleMouseUp = () => {
-  isDragging = false;
-};
-
-// Function to handle mouse move event
-const handleMouseMove = (event) => {
-  if (isDragging) {
-    // Calculate the new position of the window based on the mouse movement
-    const newLeft = event.clientX - offsetX;
-    const newTop = event.clientY - offsetY;
-
-    // Update the position of the window
-    windowElement.style.left = newLeft + 'px';
-    windowElement.style.top = newTop + 'px';
-  }
-};
-
-// Attach event listeners to the window bar
-windowBarElement.addEventListener('mousedown', handleMouseDown);
-window.addEventListener('mouseup', handleMouseUp);
-window.addEventListener('mousemove', handleMouseMove);
+//close projects folder
+let close_projects_folder = document.getElementById('close-project');
+close_projects_folder.addEventListener("click", () => {
+  projects_window.style.display = "none";
+})
 
 
+//draggable window functionality
 
+function DraggableWindow(windowElementID, windowBarElementID) {
 
+  const windowElement = document.getElementById(windowElementID);
+  const windowBarElement = document.getElementById(windowBarElementID);
 
+  let isDragging = false;
+  let offsetX = 0;
+  let offsetY = 0;
 
+  // Function to handle mouse down event on the window bar
+  const handleMouseDown = (event) => {
+    isDragging = true;
 
+    // Calculate the offset between the mouse position and the window position
+    offsetX = event.clientX - windowElement.offsetLeft;
+    offsetY = event.clientY - windowElement.offsetTop;
+  };
 
+  // Function to handle mouse up event
+  const handleMouseUp = () => {
+    isDragging = false;
+  };
 
+  // Function to handle mouse move event
+  const handleMouseMove = (event) => {
+    if (isDragging) {
+      // Calculate the new position of the window based on the mouse movement
+      const newLeft = event.clientX - offsetX;
+      const newTop = event.clientY - offsetY;
+
+      // Update the position of the window
+      windowElement.style.left = newLeft + 'px';
+      windowElement.style.top = newTop + 'px';
+    }
+  };
+
+  // Attach event listeners to the window bar
+  windowBarElement.addEventListener('mousedown', handleMouseDown);
+  window.addEventListener('mouseup', handleMouseUp);
+  window.addEventListener('mousemove', handleMouseMove);
+}
+
+let about_me_bar = document.getElementById("about_me_bar");
+DraggableWindow('about_me_MS', 'about_me_bar');
+let projects_bar = document.getElementById("projects_bar");
+DraggableWindow('projects_window', 'projects_bar');
 
 
 
