@@ -229,22 +229,23 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#paintIFrame{
+#paint_window {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 800px;
-    height: 700px;
-}
-#paint_window{
+    height: 805px; /* Adjusted to include the window bar height */
+    width: 691px;
+  }
+  
+  #paintIFrame {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: 800px;
-}
+    top: 30px; /* Offset the iframe by the height of the window bar */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 30px); /* Adjust the height of the iframe to fit within the parent */
+    border: none;
+  }
 
 }
 
