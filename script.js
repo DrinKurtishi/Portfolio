@@ -29,19 +29,37 @@ close_projects_folder.addEventListener("click", () => {
 let paint_app = document.getElementById("paint_icon");
 let paintIFrame = document.getElementById("paintIFrame");
 let paint_window = document.getElementById("paint_window");
+ 
+paint_app.addEventListener("dblclick", () => {
+    paintIFrame.src = "etch-a-sketch/index.html";
+    paint_window.style.display = "block";
+    paintIFrame.style.display = "block";
+});
 
 //close paint app
 let close_paint = document.getElementById("close-paint");
 close_paint.addEventListener("click", () => {
   paint_window.style.display = "none";
 })
- 
-paint_app.addEventListener("dblclick", () => {
-    paintIFrame.src = "etch-a-sketch/index.html";
-    paint_window.style.display = "block";
-    paintIFrame.style.display = "block";
-    console.log("works");
+
+//open rock paper scissors
+let rps_app = document.getElementById("game_icon");
+let rpsIFrame = document.getElementById("rpsIFrame");
+let rps_window = document.getElementById("rps_window");
+
+rps_app.addEventListener("dblclick", () => {
+  rpsIFrame.src = "rock-paper-scissors/index.html";
+  rps_window.style.display = "block";
+  rpsIFrame.style.display = "block";
 });
+
+//close rock paper scissors
+let close_rps = document.getElementById("close-rps");
+close_rps.addEventListener("click", () => {
+  rps_window.style.display = "none";
+})
+
+
 
 
 //draggable window functionality
@@ -95,6 +113,8 @@ let projects_bar = document.getElementById("projects_bar");
 DraggableWindow('projects_window', 'projects_bar');
 let paint_bar = document.getElementById("paint_bar");
 DraggableWindow('paint_window', 'paint_bar');
+let rps_bar = document.getElementById("rps_bar");
+DraggableWindow('rps_window', 'rps_bar');
 
 
 
