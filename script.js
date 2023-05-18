@@ -59,6 +59,19 @@ close_rps.addEventListener("click", () => {
   rps_window.style.display = "none";
 })
 
+//open contact 
+let contact_file = document.getElementById("contact_me");
+let contact_window = document.getElementById("contact_window");
+contact_file.addEventListener("dblclick", () => {
+  contact_window.style.display = "block";
+});
+
+//close contact
+let close_contact = document.getElementById("close-contact");
+close_contact.addEventListener("click", () => {
+  contact_window.style.display = "none";
+})
+
 
 
 
@@ -115,6 +128,8 @@ let paint_bar = document.getElementById("paint_bar");
 DraggableWindow('paint_window', 'paint_bar');
 let rps_bar = document.getElementById("rps_bar");
 DraggableWindow('rps_window', 'rps_bar');
+let contact_bar = document.getElementById("email_bar");
+DraggableWindow('contact_window', 'email_bar');
 
 
 
@@ -125,20 +140,33 @@ let z_index = 0;
 //giving a rising z index to every window so it comes
 // above the other windows every time it's clicked
 
-about_me_window.addEventListener("click", () =>{
-    about_me_window.style.zIndex = z_index;
-    z_index = z_index + 1;
-    console.log("zindex: ", z_index);
-});
-
-about_me_MS.addEventListener("click", () => {
+about_me_MS.addEventListener("mousedown", () => {
     about_me_MS.style.zIndex = z_index;
     z_index = z_index + 1;
 });
 
-my_picture.addEventListener("click", () => {
-    my_picture.style.zIndex = z_index;
-    z_index = z_index + 1;
-});
+projects_window.addEventListener("mousedown", () => {
+  projects_window.style.zIndex = z_index;
+  z_index = z_index + 1;
+})
+
+paint_window.addEventListener("mousedown", () => {
+  paint_window.style.zIndex = z_index + 20;
+  z_index = z_index + 20;
+})
+
+rps_window.addEventListener("mousedown", () => {
+  rps_window.style.zIndex = z_index + 20;
+  z_index = z_index + 20;
+})
+
+contact_window.addEventListener("mousedown", () => {
+  contact_window.style.zIndex = z_index;
+  z_index = z_index + 1;
+})
 */
+
+
+
+
 

@@ -19,6 +19,10 @@
                 <img class="folder_icon" src="images/windows_folder_icon.png">
                 <p class="folder_name">My projects</p>
             </div>
+            <div class="folder_with_name" id="contact_me">
+                <img class="folder_icon" src="images/email_icon.png">
+                <p class="folder_name">Contact me</p>
+            </div>
         </div>
 
         <div class="bar_window_container" id="about_me_MS">
@@ -146,6 +150,45 @@
         </div>
         <div id="rps_frame">
             <iframe id="rpsIFrame" src=""></iframe>
+        </div>
+      </div>
+
+      <div class="bar_window_container" id="contact_window">
+        <div class="window_bar" id="email_bar">
+            <div class="bar_right">
+                <img src="images/email_icon.png" width="30px" draggable="false">
+                <p class="title">Contact me</p>
+            </div>
+            <div class="bar_left">
+                <button class="control-buttons" id="minimize-contact">
+                    <img src="images/minimize.png" draggable="false" width="25px">
+                </button>
+                <button class="control-buttons" id="windowed-contact">
+                    <img src="images/windowed.png" draggable="false" width="25px">
+                </button>
+                <button class="control-buttons close_button" id="close-contact">
+                    <img src="images/close.png" draggable="false" width="25px">
+                </button>
+            </div>
+
+        </div>
+        <div id="contact_container">
+            <form>
+                <div>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+                <div>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+                
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" style="height:170px"></textarea>
+            
+                <input type="submit" value="Submit">
+            
+              </form>
         </div>
       </div>
 

@@ -124,10 +124,61 @@ html {
 #rps_window{
     display: none;
 }
+#contact_window{
+    display: none;
+}
 
 #footer {
   display: none;
 }
+#contact_container{
+    background-color: rgb(210, 210, 210);;
+    position: absolute;
+    top: 33px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: inset;
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+  }
+
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: inset;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  #subject{
+    resize: none;
+    overflow: scroll;
+  }
+  #contact_container{
+    border: 10px solid rgb(210, 210, 210);
+  }
+  form {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+  }
 
 /*CSS for PC's*/
 @media only screen and (min-width: 1000px) {
@@ -140,11 +191,17 @@ html {
    }
 
    .bar_window_container {
-    scale: 1;
+    scale: 0.9;
     display: none;
     width: 700px;
     height: 500px;
 
+}
+.folders_container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 }
 
 .folder_with_name {
@@ -271,8 +328,14 @@ html {
   height: 100%;
   border: none;
 }
-
+#contact_window{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+
 
 /*CSS for 16:10 displays*/
 @media only screen and (min-height: 1200px) {
