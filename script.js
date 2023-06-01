@@ -83,7 +83,8 @@ close_rps.addEventListener("click", () => {
 //open contact 
 let contact_file = document.getElementById("contact_me");
 let contact_window = document.getElementById("contact_window");
-contact_file.addEventListener("dblclick", () => {
+contact_file.addEventListener("dblclick", (event) => {
+  event.preventDefault();
   contact_window.style.display = "block";
   contact_window.style.zIndex = z_index;
   z_index = z_index + 1;
@@ -93,6 +94,21 @@ contact_file.addEventListener("dblclick", () => {
 let close_contact = document.getElementById("close-contact");
 close_contact.addEventListener("click", () => {
   contact_window.style.display = "none";
+})
+
+//open msg ssent window through submit
+let msg_sent_window = document.getElementById("message_sent");
+let form = document.getElementById("contact_container");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  contact_window.style.display = "none";
+  msg_sent_window.style.display = "block";
+})
+
+//close message sent
+let close_msg_sent = document.getElementById("close_msg_sent");
+close_msg_sent.addEventListener("click", () => {
+  msg_sent_window.style.display = "none";
 })
 
 //giving a rising z index to every window so it comes
@@ -120,6 +136,11 @@ rps_window.addEventListener("mousedown", () => {
 
 contact_window.addEventListener("mousedown", () => {
   contact_window.style.zIndex = z_index;
+  z_index = z_index + 1;
+})
+
+msg_sent_window.addEventListener("mousedown", () => {
+  msg_sent_window.style.zIndex = z_index;
   z_index = z_index + 1;
 })
 
@@ -168,16 +189,12 @@ function DraggableWindow(windowElementID, windowBarElementID) {
   window.addEventListener('mousemove', handleMouseMove);
 }
 
-let about_me_bar = document.getElementById("about_me_bar");
 DraggableWindow('about_me_MS', 'about_me_bar');
-let projects_bar = document.getElementById("projects_bar");
 DraggableWindow('projects_window', 'projects_bar');
-let paint_bar = document.getElementById("paint_bar");
 DraggableWindow('paint_window', 'paint_bar');
-let rps_bar = document.getElementById("rps_bar");
 DraggableWindow('rps_window', 'rps_bar');
-let contact_bar = document.getElementById("email_bar");
 DraggableWindow('contact_window', 'email_bar');
+DraggableWindow('message_sent', 'msg_sent_bar');
 
 
 

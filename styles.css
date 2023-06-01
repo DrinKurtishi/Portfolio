@@ -184,6 +184,16 @@ input[type=text], select, textarea {
     display: none;
   }
 
+  #message_sent{
+    display: none;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 /*CSS for PC's*/
 @media only screen and (min-width: 1000px) {
    html {
@@ -205,13 +215,14 @@ input[type=text], select, textarea {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 15px;
 }
 
 
 .folder_with_name {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 5px 25px;
     align-items: center;
 }
 .folder_with_name:hover{
@@ -249,7 +260,6 @@ input[type=text], select, textarea {
     width: 65px;
 }
 #about_me_MS{
-    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -411,10 +421,14 @@ input[type=text], select, textarea {
     bottom: 0;
     width: 100%;
 }
-
-
+ #message_sent{
+    width: 576px;
+    height: 223px;
 }
-
+#message_sent_text{
+    font-size: 38px;
+}
+}
 
 /*CSS for 16:10 displays*/
 @media only screen and (min-height: 1200px) {

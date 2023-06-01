@@ -64,32 +64,29 @@
             <div id="about_me_text">
                 <div id="about_me_header">
                     <div id="title_and_paragraph">
-                        <p id="about_me_title">About me</p><br>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed nulla volutpat, faucibus elit in, suscipit magna. 
-                            Sed venenatis dui eget libero dapibus,
+                        <p id="about_me_title">Hello there!</p><br>
+                        <p> Welcome to my portfolio, a unique Windows XP-themed showcase of my passion for computer science and software engineering. I'm Drin Kurtishi,
+                            a first-year student at the South East European University (SEEU) in Tetovo,
                         </p>
                     </div>
                 <img src="images/foto_matura.jpg" width="140px">
             </div>
-                mut feugiat dolor egestas.Quisque posuere facilisis felis, vitae pretium magna 
-                consectetur eget. Phasellus scelerisque sapien quis malesuada maximus. Phasellus placerat urna mi. Pellentesque erat lectus,
-                mollis id lorem eu, rhoncus luctus diam. Praesent sit amet tincidunt arcu. Donec nisi lacus, venenatis at commodo id, pulvinar 
-                sit amet erat. Vivamus posuere libero sed feugiat malesuada. Ut ac tellus at lacus scelerisque placerat nec in lectus. Cras in 
-                sapien a dui vehicula bibendum in eget massa. Aenean ac diam dignissim, efficitur felis vel, tempus tellus. Interdum et malesuada 
-                fames ac ante ipsum primis in faucibus.
-                <br>
-                Proin efficitur volutpat velit sit amet varius. Integer venenatis accumsan nisi. Cras pharetra turpis quis vehicula ullamcorper. 
-                Suspendisse hendrerit ante in risus malesuada auctor. Nam faucibus non eros a interdum. Phasellus quam urna, volutpat quis libero 
-                sed, placerat consectetur ipsum. Vivamus ac consectetur ante. Donec non nibh eu nisl dictum molestie. Morbi egestas quam in ligula 
-                mattis, sed venenatis eros malesuada. Nulla quis nisi ut tellus scelerisque pellentesque. Duis dapibus, augue volutpat pharetra mollis, 
-                nulla ante eleifend sapien, ut egestas orci elit vitae felis. Etiam fermentum volutpat risus.
-                <br><br>
-                Sed vulputate ex eu est sagittis venenatis. Phasellus eu interdum nulla, in auctor orci. Morbi dictum mauris at viverra tincidunt. 
-                Curabitur id eros iaculis, porta tellus non, gravida diam. Cras aliquet ipsum augue, nec pellentesque leo porttitor eu. Curabitur 
-                iaculis efficitur justo a semper. Donec quis eros sed est blandit pharetra. Nunc eu arcu in risus luctus bibendum id a felis. Vivamus 
-                ac libero mauris. Mauris et dignissim neque, vitae vestibulum lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-                Nunc sit amet porta quam. Quisque elementum ornare tortor, ut porttitor felis molestie vel. Nam quam urna, posuere mattis porta vel, 
-                ornare vel erat. Nam consequat auctor orci vel congue. Maecenas at luctus velit.
+            Macedonia. As a computer science enthusiast, I am constantly eager to expand 
+            my knowledge and skills in the ever-evolving field of technology. My journey in this exciting realm began during my early years, when I discovered my 
+            fascination with computers and their limitless possibilities. Since then, I have been on an exciting path of exploration and learning.
+            <br><br>
+            Within this virtual desktop, you will find a collection of my projects neatly organized in folders. Each folder represents a unique project I have worked on, 
+            showcasing my dedication, creativity, and problem-solving abilities. Just like the familiar interface of Windows XP, clicking on each folder will reveal the 
+            details and outcomes of my endeavors. My ultimate goal is to become a proficient software engineer, creating innovative solutions that positively impact 
+            people's lives. With my foundation in computer science studies and my ongoing commitment to learning, I aim to contribute to the advancement of technology 
+            and make a meaningful difference in the world.
+            <br><br>
+            If you have any questions, inquiries, or simply want to connect, don't hesitate to reach out. You can easily find my contact details within this Windows 
+            XP-themed interface. I'm always excited to collaborate, exchange ideas, and be part of new and exciting projects. Thank you for visiting my portfolio, 
+            and I hope you enjoy exploring my projects as much as I enjoyed creating them. Together, let's embrace the ever-evolving world of technology and make a 
+            lasting impact. Best regards, Drin Kurtishi.
+            <br><br>
+      
             </div>
         </div>
         <div class="bar_window_container" id="projects_window">
@@ -191,7 +188,7 @@
 
         </div>
         <div id="contact_container">
-            <form>
+            <form id="contact_form">
                 <div>
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -204,14 +201,25 @@
                 <label for="subject">Subject</label>
                 <textarea id="subject" name="subject" style="height:170px"></textarea>
             
-                <input type="submit" value="Submit">
+                <input id="submit" type="submit" value="Submit">
             
               </form>
         </div>
       </div>
 
-
-
+      <div class="bar_window_container" id="message_sent">
+        <div class="window_bar" id="msg_sent_bar">
+            <div class="bar_right">
+                <img src="images/email_icon.png" width="30px" draggable="false">
+                <p class="title">Message notification</p>
+            </div>
+            <div class="bar_left">
+                <button class="control-buttons close_button" id="close_msg_sent">
+                    <img src="images/close.png" draggable="false" width="25px">
+                </button>
+            </div>
+      </div>
+      <p id="message_sent_text">Message sent succesfully, Thank you for reaching out! I appreciate your interest and will be in contact with you shortly.</p>
     </div>
     <footer id="footer">
             <img id="start_button" src="images/start_button.png">
