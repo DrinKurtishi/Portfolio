@@ -180,6 +180,10 @@ input[type=text], select, textarea {
     flex-direction: column;
   }
 
+  #lock_screen{
+    display: none;
+  }
+
 /*CSS for PC's*/
 @media only screen and (min-width: 1000px) {
    html {
@@ -202,24 +206,25 @@ input[type=text], select, textarea {
     flex-direction: column;
     gap: 15px;
 }
-}
+
 
 .folder_with_name {
     display: flex;
     flex-direction: column;
-    margin-left: 15px;
-    margin-top: 10px;
+    padding: 10px;
     align-items: center;
-
+}
+.folder_with_name:hover{
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .folder_icon {
-    display: block;
+    /*display: block;*/
     width: 65px;
 }
 
 .folder_name {
-    display: block;
+    /*display: block;*/
     color: white;
     text-shadow: 1px 2px 2px rgb(0, 0, 0);
     font-size:medium;
@@ -268,6 +273,7 @@ input[type=text], select, textarea {
 }
 
 #footer {
+    display: none !important;
     position: absolute;
     bottom: 0;
     height: 35px;
@@ -334,7 +340,79 @@ input[type=text], select, textarea {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+#start_button:hover{
+    filter:brightness(110%);
+    transition: 0.1s;
+    cursor: pointer;
+}
 
+#lock_screen{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #245DDA;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#left{
+    display: flex;
+    align-items: center;
+}
+#left_content{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    padding-right: 100px;
+}
+#profile_pic{
+    border: 3px solid gold;
+    border-radius: 10%;
+}
+#left_content:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right,rgba(0, 0, 127, 0.5), rgba(111, 111, 255, 0.1));
+    border-radius: 5%;
+}
+#user_name{
+    color: white;
+    font-size: 30px;
+}
+#click_username_text{
+    font-size: larger;
+    color: white;
+}
+#windows_lockscreen_logo{
+    margin: 33px;
+    scale: 1.5;
+}
+#lock_screen_contents{
+    display: flex;
+    position: absolute;
+    gap: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.lock_screen_bars{
+    padding: 50px;
+    background-color: #163c8f;
+}
+#bottom_bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+}
 
 
 /*CSS for 16:10 displays*/
