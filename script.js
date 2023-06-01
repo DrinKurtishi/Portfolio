@@ -1,8 +1,21 @@
+//z-index counter
+let z_index = 0;
+//exiting out of the lock screen
+let footer = document.getElementById("footer");
+let lock_screen = document.getElementById("lock_screen");
+let user_button = document.getElementById("left_content");
+user_button.addEventListener("click", () => {
+  lock_screen.style.display = "none";
+});
+
 //open about me MS file
 let about_me_file = document.getElementById('about_me_file');
 let about_me_MS = document.getElementById('about_me_MS');
 about_me_file.addEventListener("dblclick", () => {
     about_me_MS.style.display = "block";
+    about_me_MS.style.zIndex = z_index;
+    z_index = z_index + 1;
+
 });
 
 //close about me MS file
@@ -17,6 +30,8 @@ let projects_window = document.getElementById("projects_window");
 
 projects_folder.addEventListener("dblclick", () => {  
     projects_window.style.display = "block";
+    projects_window.style.zIndex = z_index;
+    z_index = z_index + 1;
 });
 
 //close projects folder
@@ -34,6 +49,9 @@ paint_app.addEventListener("dblclick", () => {
     paintIFrame.src = "etch-a-sketch/index.html";
     paint_window.style.display = "block";
     paintIFrame.style.display = "block";
+    paint_window.style.zIndex = z_index;
+    z_index = z_index + 1;
+
 });
 
 //close paint app
@@ -51,6 +69,9 @@ rps_app.addEventListener("dblclick", () => {
   rpsIFrame.src = "rock-paper-scissors/index.html";
   rps_window.style.display = "block";
   rpsIFrame.style.display = "block";
+  rps_window.style.zIndex = z_index;
+  z_index = z_index + 1;
+
 });
 
 //close rock paper scissors
@@ -64,6 +85,8 @@ let contact_file = document.getElementById("contact_me");
 let contact_window = document.getElementById("contact_window");
 contact_file.addEventListener("dblclick", () => {
   contact_window.style.display = "block";
+  contact_window.style.zIndex = z_index;
+  z_index = z_index + 1;
 });
 
 //close contact
@@ -72,8 +95,33 @@ close_contact.addEventListener("click", () => {
   contact_window.style.display = "none";
 })
 
+//giving a rising z index to every window so it comes
+// above the other windows every time it's clicked
 
+about_me_MS.addEventListener("mousedown", () => {
+  about_me_MS.style.zIndex = z_index;
+  z_index = z_index + 1;
+});
 
+projects_window.addEventListener("mousedown", () => {
+  projects_window.style.zIndex = z_index;
+  z_index = z_index + 1;
+})
+
+paint_window.addEventListener("mousedown", () => {
+  paint_window.style.zIndex = z_index;
+  z_index = z_index + 1;
+})
+
+rps_window.addEventListener("mousedown", () => {
+  rps_window.style.zIndex = z_index;
+  z_index = z_index + 1;
+})
+
+contact_window.addEventListener("mousedown", () => {
+  contact_window.style.zIndex = z_index;
+  z_index = z_index + 1;
+})
 
 //draggable window functionality
 
@@ -130,41 +178,6 @@ let rps_bar = document.getElementById("rps_bar");
 DraggableWindow('rps_window', 'rps_bar');
 let contact_bar = document.getElementById("email_bar");
 DraggableWindow('contact_window', 'email_bar');
-
-
-
-//future functionality for z index positioining
-/*
-//z-index counter
-let z_index = 0;
-//giving a rising z index to every window so it comes
-// above the other windows every time it's clicked
-
-about_me_MS.addEventListener("mousedown", () => {
-    about_me_MS.style.zIndex = z_index;
-    z_index = z_index + 1;
-});
-
-projects_window.addEventListener("mousedown", () => {
-  projects_window.style.zIndex = z_index;
-  z_index = z_index + 1;
-})
-
-paint_window.addEventListener("mousedown", () => {
-  paint_window.style.zIndex = z_index + 20;
-  z_index = z_index + 20;
-})
-
-rps_window.addEventListener("mousedown", () => {
-  rps_window.style.zIndex = z_index + 20;
-  z_index = z_index + 20;
-})
-
-contact_window.addEventListener("mousedown", () => {
-  contact_window.style.zIndex = z_index;
-  z_index = z_index + 1;
-})
-*/
 
 
 
