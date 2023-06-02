@@ -16,6 +16,8 @@ about_me_file.addEventListener("dblclick", () => {
     about_me_MS.style.zIndex = z_index;
     z_index = z_index + 1;
 
+    
+
 });
 
 //close about me MS file
