@@ -37,7 +37,7 @@ projects_folder.addEventListener("dblclick", () => {
 let close_projects_folder = document.getElementById('close-project');
 close_projects_folder.addEventListener("click", () => {
   projects_window.style.display = "none";
-})
+});
 
 //open paint app
 let paint_app = document.getElementById("paint_icon");
@@ -57,7 +57,7 @@ paint_app.addEventListener("dblclick", () => {
 let close_paint = document.getElementById("close-paint");
 close_paint.addEventListener("click", () => {
   paint_window.style.display = "none";
-})
+});
 
 //open rock paper scissors
 let rps_app = document.getElementById("game_icon");
@@ -70,14 +70,13 @@ rps_app.addEventListener("dblclick", () => {
   rpsIFrame.style.display = "block";
   rps_window.style.zIndex = z_index;
   z_index = z_index + 1;
-
 });
 
 //close rock paper scissors
 let close_rps = document.getElementById("close-rps");
 close_rps.addEventListener("click", () => {
   rps_window.style.display = "none";
-})
+});
 
 //open contact 
 let contact_file = document.getElementById("contact_me");
@@ -93,7 +92,7 @@ contact_file.addEventListener("dblclick", (event) => {
 let close_contact = document.getElementById("close-contact");
 close_contact.addEventListener("click", () => {
   contact_window.style.display = "none";
-})
+});
 
 //open msg ssent window through submit
 let msg_sent_window = document.getElementById("message_sent");
@@ -102,20 +101,20 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   contact_window.style.display = "none";
   msg_sent_window.style.display = "block";
-})
+});
 
 //open msg sent for submit button in mobile
 let form_mobile = document.getElementById("contact_container_mobile");
 form_mobile.addEventListener("submit", (event) => {
   event.preventDefault();
   alert("Message sent succesfully, Thank you for reaching out! I appreciate your interest and will be in contact with you shortly");
-})
+});
 
 //close message sent
 let close_msg_sent = document.getElementById("close_msg_sent");
 close_msg_sent.addEventListener("click", () => {
   msg_sent_window.style.display = "none";
-})
+});
 
 //giving a rising z index to every window so it comes
 // above the other windows every time it's clicked
@@ -128,27 +127,27 @@ about_me_MS.addEventListener("mousedown", () => {
 projects_window.addEventListener("mousedown", () => {
   projects_window.style.zIndex = z_index;
   z_index = z_index + 1;
-})
+});
 
 paint_window.addEventListener("mousedown", () => {
   paint_window.style.zIndex = z_index;
   z_index = z_index + 1;
-})
+});
 
 rps_window.addEventListener("mousedown", () => {
   rps_window.style.zIndex = z_index;
   z_index = z_index + 1;
-})
+});
 
 contact_window.addEventListener("mousedown", () => {
   contact_window.style.zIndex = z_index;
   z_index = z_index + 1;
-})
+});
 
 msg_sent_window.addEventListener("mousedown", () => {
   msg_sent_window.style.zIndex = z_index;
   z_index = z_index + 1;
-})
+});
 
 //draggable window functionality
 
@@ -221,7 +220,8 @@ function minimizeWindow(windowId, title, logoUrl) {
   if (existingMinimizedWindow) {
     // If the minimized window already exists, bring it to the front
     existingMinimizedWindow.classList.add('active');
-  } else {
+  } 
+  else {
     // Create a minimized window element
     let minimizedWindow = document.createElement('div');
     minimizedWindow.className = 'minimized_window';
