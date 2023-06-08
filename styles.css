@@ -53,12 +53,12 @@ html {
     padding: 0;
     pointer-events: none; /*diable buttons on phone and tablet*/
 }
-.close_button:hover{
+.control-buttons:hover{
     filter:brightness(110%);
     transition: 0.1s;
     cursor: pointer;
 }
-.close_button:active{
+.control-buttons:active{
     filter: brightness(80%);
     cursor: pointer;
 }
@@ -435,6 +435,30 @@ input[type=text], select, textarea, input[type=email] {
 }
 #message_sent_text{
     font-size: 38px;
+}
+#minimized_windows_container{
+    width: 100%;
+    display: flex;
+}
+.minimized_window{
+    width: 10%;
+    background-color: #2c7ac7;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10%;
+}
+.window_logo{
+    width: 20%;
+}
+.window_title{
+    font-size: 1vw;
 }
 }
 

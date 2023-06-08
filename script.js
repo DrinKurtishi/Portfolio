@@ -203,3 +203,77 @@ DraggableWindow('contact_window', 'email_bar');
 DraggableWindow('message_sent', 'msg_sent_bar');
 
 
+//minimized windows
+
+// Define an array to store the minimized windows
+let minimizedWindows = [];
+
+// Function to minimize a window
+function minimizeWindow(windowId, title, logoUrl) {
+  let windowElement = document.getElementById(windowId);
+  windowElement.style.display = 'none';
+
+  // Check if the minimized window already exists
+  let existingMinimizedWindow = minimizedWindows.find(function(w) {
+    return w.dataset.windowId === windowId;
+  });
+
+  if (existingMinimizedWindow) {
+    // If the minimized window already exists, bring it to the front
+    existingMinimizedWindow.classList.add('active');
+  } else {
+    // Create a minimized window element
+    let minimizedWindow = document.createElement('div');
+    minimizedWindow.className = 'minimized_window';
+
+    // Create the logo element
+    let logoElement = document.createElement('img');
+    logoElement.className = 'window_logo';
+    logoElement.src = logoUrl;
+
+    // Create the title element
+    let titleElement = document.createElement('span');
+    titleElement.className = 'window_title';
+    titleElement.textContent = title;
+
+    // Add the logo and title to the minimized window
+    minimizedWindow.appendChild(logoElement);
+    minimizedWindow.appendChild(titleElement);
+    minimizedWindow.dataset.windowId = windowId;
+
+    // Add click event listener to restore the window
+    minimizedWindow.addEventListener('click', function() {
+      windowElement.style.display = 'block';
+      minimizedWindowsContainer.removeChild(minimizedWindow);
+      minimizedWindows = minimizedWindows.filter(function(w) {
+        return w !== minimizedWindow;
+      });
+    });
+
+    // Add the minimized window to the container
+    let minimizedWindowsContainer = document.getElementById('minimized_windows_container');
+    minimizedWindowsContainer.appendChild(minimizedWindow);
+
+    // Add the minimized window to the array
+    minimizedWindows.push(minimizedWindow);
+  }
+}
+
+// Example usage:
+document.getElementById('minimize-about-file').addEventListener('click', function() {
+  minimizeWindow('about_me_MS', 'AboutMe', 'images/ms_word_logo.jpg');
+});
+document.getElementById('minimize-project').addEventListener('click', function() {
+  minimizeWindow('projects_window', 'My projects', 'images/windows_folder_icon.png');
+});
+document.getElementById('minimize-paint').addEventListener('click', function() {
+  minimizeWindow('paint_window', 'Paint', 'images/paint-logo.png');
+});
+document.getElementById('minimize-rps').addEventListener('click', function() {
+  minimizeWindow('rps_window', 'RPS', 'images/windows_game_icon.png');
+});
+document.getElementById('minimize-contact').addEventListener('click', function() {
+  minimizeWindow('contact_window', 'Contact me', 'images/email_icon.png');
+});
+
+
