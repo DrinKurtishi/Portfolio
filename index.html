@@ -190,16 +190,16 @@
         <div id="contact_container">
             <form id="contact_form">
                 <div>
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name.." required>
                 </div>
                 <div>
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="yourName@yourEmail.com" required>
                 </div>
                 
                 <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" style="height:170px"></textarea>
+                <textarea id="subject" name="subject" style="height:170px" required></textarea>
             
                 <input id="submit" type="submit" value="Submit">
             
@@ -294,6 +294,45 @@
         </div>
         <div>
             <a href="https://github.com/DrinKurtishi/rock-paper-scissors"><img src="images/rps_mobile.png" width="100%"></a>
+        </div>
+      </div>
+
+      <div class="bar_window_container" id="contact_window_mobile">
+        <div class="window_bar" id="email_bar">
+            <div class="bar_right">
+                <img src="images/email_icon.png" width="30px" draggable="false">
+                <p class="title">Contact me</p>
+            </div>
+            <div class="bar_left">
+                <button class="control-buttons" id="minimize-contact">
+                    <img src="images/minimize.png" draggable="false" width="25px">
+                </button>
+                <button class="control-buttons" id="windowed-contact">
+                    <img src="images/windowed.png" draggable="false" width="25px">
+                </button>
+                <button class="control-buttons close_button" id="close-contact">
+                    <img src="images/close.png" draggable="false" width="25px">
+                </button>
+            </div>
+
+        </div>
+        <div id="contact_container_mobile" style="padding: 10px; background-color: rgb(210, 210, 210);">
+            <form id="contact_form">
+                <div>
+                <label for="name">Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+                </div>
+                <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="lastname" placeholder="yourName@yourEmail.com" required>
+                </div>
+                
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" style="height:170px" required></textarea>
+            
+                <input id="submit" type="submit" value="Submit">
+            
+              </form>
         </div>
       </div>
 

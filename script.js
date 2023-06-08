@@ -104,6 +104,13 @@ form.addEventListener("submit", (event) => {
   msg_sent_window.style.display = "block";
 })
 
+//open msg sent for submit button in mobile
+let form_mobile = document.getElementById("contact_container_mobile");
+form_mobile.addEventListener("submit", (event) => {
+  event.preventDefault();
+  alert("Message sent succesfully, Thank you for reaching out! I appreciate your interest and will be in contact with you shortly");
+})
+
 //close message sent
 let close_msg_sent = document.getElementById("close_msg_sent");
 close_msg_sent.addEventListener("click", () => {

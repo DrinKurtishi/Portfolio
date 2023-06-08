@@ -140,7 +140,7 @@ html {
     right: 0;
 }
 
-input[type=text], select, textarea {
+input[type=text], select, textarea, input[type=email] {
     width: 100%; 
     padding: 12px; 
     border: inset;
@@ -192,6 +192,9 @@ input[type=text], select, textarea {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  #message_sent_mobile{
+    display: none;
   }
 
 /*CSS for PC's*/
