@@ -244,6 +244,8 @@ function minimizeWindow(windowId, title, logoUrl) {
     // Add click event listener to restore the window
     minimizedWindow.addEventListener('click', function() {
       windowElement.style.display = 'block';
+      windowElement.style.zIndex = z_index;
+      z_index = z_index + 1;
       minimizedWindowsContainer.removeChild(minimizedWindow);
       minimizedWindows = minimizedWindows.filter(function(w) {
         return w !== minimizedWindow;
@@ -261,7 +263,7 @@ function minimizeWindow(windowId, title, logoUrl) {
 
 // Example usage:
 document.getElementById('minimize-about-file').addEventListener('click', function() {
-  minimizeWindow('about_me_MS', 'AboutMe', 'images/ms_word_logo.jpg');
+  minimizeWindow('about_me_MS', 'AboutMe', 'images/ms_word_logo.jpg', );
 });
 document.getElementById('minimize-project').addEventListener('click', function() {
   minimizeWindow('projects_window', 'My projects', 'images/windows_folder_icon.png');
