@@ -15,16 +15,13 @@ about_me_file.addEventListener("dblclick", () => {
     about_me_MS.style.display = "block";
     about_me_MS.style.zIndex = z_index;
     z_index = z_index + 1;
-
-    
-
 });
 
 //close about me MS file
 let close_aboutMe_file = document.getElementById('close-about-file');
 close_aboutMe_file.addEventListener("click", () => {
     about_me_MS.style.display = "none";
-})
+});
 
 //open projects folder
 let projects_folder = document.getElementById("projects_folder");
@@ -197,8 +194,5 @@ DraggableWindow('paint_window', 'paint_bar');
 DraggableWindow('rps_window', 'rps_bar');
 DraggableWindow('contact_window', 'email_bar');
 DraggableWindow('message_sent', 'msg_sent_bar');
-
-
-
 
 
