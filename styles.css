@@ -6,7 +6,6 @@
 html {
     background: url(images/xp_wallpaper_phone.jpg) no-repeat center fixed;
     background-size: cover;
-    overflow: hidden; /*hide windows that go out of display*/
 }
 
 
@@ -205,6 +204,7 @@ input[type=text], select, textarea, input[type=email] {
    html {
     background: url(images/xp_wallpaper.jpg)no-repeat center fixed;
     background-size: cover;
+    overflow: hidden; /*hide windows that go out of display*/
    }
    .control-buttons{
     pointer-events: all; /*re-enable buttons on PC*/
