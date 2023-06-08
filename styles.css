@@ -6,7 +6,10 @@
 html {
     background: url(images/xp_wallpaper_phone.jpg) no-repeat center fixed;
     background-size: cover;
+    overflow: hidden; /*hide windows that go out of display*/
 }
+
+
 
 .bar_window_container { 
     border: 5px solid #245DDA;
